@@ -104,7 +104,7 @@ class Vendor extends Person {
   
 
   sellTo(customer, numberOfIceCreams){
-    this.location = this.moveTo(this.Person.location);
+    this.moveTo(customer.location);
   }
 
 }
