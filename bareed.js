@@ -9,6 +9,25 @@
 *
 * let point = new Point(x, y);
 ****************************************************************/
+// class Point {
+//   constructor(x, y) {
+//     this.x = x;
+//     this.y = y;
+//   }
+
+//   distanceTo(point) {
+//     let xDelta = this.x - point.x;
+//     let yDelta = this.y - point.y;
+//     return Math.sqrt(xDelta*xDelta + yDelta*yDelta); // PYTHAGORAS!
+//   }
+
+//   static randomPoint(maxX, maxY) {
+//     let x = Math.random() * maxX;
+//     let y = Math.random() * maxY;
+//     return new Point(x, y);
+//   }
+// }
+
 class Point {
   constructor(x, y) {
     this.x = x;
@@ -22,8 +41,8 @@ class Point {
   }
 
   static randomPoint(maxX, maxY) {
-    let x = Math.random() * maxX;
-    let y = Math.random() * maxY;
+    let x = Math.random() * (maxX || 100);
+    let y = Math.random() * (maxY || 100);
     return new Point(x, y);
   }
 }
